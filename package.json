@@ -1,0 +1,24 @@
+{
+  "name": "rss-reader-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require intelli-espower-loader"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^3.0.2",
+    "power-assert": "^1.4.1"
+  },
+  "dependencies": {
+    "request": "^2.74.0",
+    "xml2js": "^0.4.17"
+  },
+  "directories": {
+    "test": "test/"
+  }
+}
