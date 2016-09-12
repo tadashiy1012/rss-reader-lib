@@ -12,10 +12,29 @@ module.exports = (function() {
     }
   }
   function convertRss(items) {
-    return items;
+    const title = items.title;
+    const entries = [];
+    for (let entry of items.item) {
+      console.log(entry);
+      entries.push({
+        title: entry.title,
+        link: entry.link,
+        content: entry.description
+      });
+    }
+    return [title, entries];
   }
   function convertAtom(items) {
-    return items;
+    const title = items.title;
+    const entries = [];
+    for (let entry of items.entry) {
+      entries.push({
+        title: entry.title,
+        link: entry.link,
+        content: entry.content
+      });
+    }
+    return [title, entries];
   }
   return function(tgtUrl) {
     return new Promise((resolve, reject) => {
